@@ -1,0 +1,12 @@
+# add travis yml file for testing...
+language: java
+dist: trusty
+sudo: required
+
+before_install:
+- sudo apt-get install curl -y
+- sudo apt-get install tree -y
+
+script:
+- mvn clean package
+- tree .
